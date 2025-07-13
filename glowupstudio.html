@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Up Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Языки -->
+
+  <div class="lang-switch">
+  <button onclick="setLanguage('ru')">🇷🇺 RU</button>
+  <button onclick="setLanguage('de')">🇩🇪 DE</button>
+  <button onclick="setLanguage('en')">🇬🇧 EN</button>
+
+  <!-- Кнопка темы -->
+  <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
+</div>
+
+  <!-- Шапка -->
+ <div class="logo">
+  <img src="assets/2_5433776401360647531_page-0001.jpg" alt="Glow Up Logo" class="logo-img">
+</div>
+    
+</section>
+
+<a class="btn book-btn" data-i18n="book_now" onclick="openBookingModal()">Записаться</a>
+<div id="bookingModal" class="booking-modal" onclick="closeBookingModal(event)">
+  <div class="booking-content">
+    <span class="close-btn" onclick="closeBookingModal(event)">&times;</span>
+    <h2 data-i18n="booking_title">Записаться на услугу</h2>
+    
+    <div class="master">
+      <h3 data-i18n="master_alena">Алёна</h3>
+      <p data-i18n="master_alena_services">...</p>
+      <p data-i18n="master_alena_phone">...</p>
+      <p>
+        <a id="whatsapp-alena" href="https://wa.me/4915566108327" target="_blank" data-i18n-whatsapp="master_alena_whatsapp">💬 WhatsApp</a>
+      </p>
+    </div>
+    
+    <div class="master">
+      <h3 data-i18n="master_dana">Дана</h3>
+      <p data-i18n="master_dana_services">...</p>
+      <p data-i18n="master_dana_phone">...</p>
+      <p>
+        <a id="whatsapp-dana" href="https://wa.me/4916094479219" target="_blank" data-i18n-whatsapp="master_dana_whatsapp">💬 WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <span class="close" onclick="closeModal(event)">&times;</span>
+  <img class="modal-content" id="modal-img">
+
+  <!-- Стрелки -->
+  <a class="prev" onclick="prevImage(event)">&#10094;</a>
+  <a class="next" onclick="nextImage(event)">&#10095;</a>
+</div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+  <div class="hero-content">
+    <img src="assets/photo_2025-07-13_17-39-02.jpg" alt="Glow Up Studio визитка" class="business-card" />
+  </div>
+</section>
+
+  <!-- Услуги -->
+  <section class="services" id="services">
+    <h2 data-i18n="services_title">Услуги</h2>
+    <ul>
+      <li data-i18n="service_1">Маникюр и педикюр</li>
+      <li data-i18n="service_2">Наращивание ресниц</li>
+      <li data-i18n="service_3">Перманентный макияж</li>
+      <li data-i18n="service_4">Уход за лицом</li>
+      <li data-i18n="service_5">Удаление старого татуажа</li>
+    </ul>
+  </section>
+
+  <!-- О нас -->
+  <section class="about" id="about">
+    <h2 data-i18n="about_title">О нас</h2>
+    <p data-i18n="about_text">Наша студия предлагает профессиональный уход в уютной атмосфере. Опытные мастера, качественные материалы и индивидуальный подход к каждой клиентке.</p>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contact" id="contact">
+    <h2 data-i18n="contact_title">Контакты</h2>
+    <p><strong>📍 Adresse:</strong> Herforder Str. 253, 33609 Bielefeld</p>
+
+    <!-- Мама -->
+    <p><strong>💼 Olena:</strong></p>
+    <p>📱 +49 155 66108327</p>
+    <p>📸 Instagram: <a href="https://instagram.com/glowup.cosmetology" target="_blank">@glowup.cosmetology</a></p>
+
+    <!-- Коллега -->
+    <p><strong>💅 Dana:</strong></p>
+    <p>📱 +49 160 94479219</p>
+    <p>📸 Instagram: <a href="https://instagram.com/dana.nails_bielefeld" target="_blank">@dana.nails_bielefeld</a></p>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+  <h2 data-i18n="portfolio_title">Портфолио</h2>
+  <div class="portfolio-grid">
+    <img src="assets/photo_1_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_2_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_3_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_4_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_5_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_6_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_7_2025-07-13_18-35-47.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_1_2025-07-13_18-56-40.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_2_2025-07-13_18-56-40.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_3_2025-07-13_18-56-40.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_4_2025-07-13_18-56-40.jpg" class="portfolio-item" onclick="openModal(this)" />
+    <img src="assets/photo_5_2025-07-13_18-56-40.jpg" class="portfolio-item" onclick="openModal(this)" />
+   <footer>
+    <p>© 2025 Glow Up Studio. Все права защищены.</p>
+  </footer>
+
+  <script src="lang.js"></script>
+</body>
+</html>
